@@ -1,5 +1,6 @@
 package abstractfactory;
 
 public interface Vaate {
-	public void pue();
+	public void laitaPaalle();
+	public void kerro();
 }

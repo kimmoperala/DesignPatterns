@@ -2,14 +2,27 @@ package abstractfactory;
 
 public class Jasper {
 	
-	public void pue(Tehdas tehdas) {
-		Vaate farkut = tehdas.makeFarkut();
-		farkut.pue();
-		Vaate tpaita = tehdas.makeTpaita();
-		tpaita.pue();
-		Vaate lippis = tehdas.makeLippis();
-		lippis.pue();
-		Vaate kenka = tehdas.makeKengat();
-		kenka.pue();
+	private Vaate farkut;
+	private Vaate tpaita;
+	private Vaate lippis;
+	private Vaate kengat;
+	
+	public void setTehdas(Tehdas tehdas) {
+		farkut = tehdas.makeFarkut();
+		tpaita = tehdas.makeTpaita();
+		lippis = tehdas.makeLippis();
+		kengat = tehdas.makeKengat();
+	}
+	public void pue() {
+		farkut.laitaPaalle();
+		tpaita.laitaPaalle();
+		lippis.laitaPaalle();;
+		kengat.laitaPaalle();
+	}
+	public void kerro() {
+		farkut.kerro();
+		tpaita.kerro();
+		lippis.kerro();
+		kengat.kerro();
 	}
 }

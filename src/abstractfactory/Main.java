@@ -6,10 +6,18 @@ public class Main {
 		Tehdas adidas = new TehdasAdidas();
 		Tehdas boss = new TehdasBoss();
 		Jasper jasper = new Jasper();
+		
 		System.out.println("Opiskelijana Jasperilla: ");
-		jasper.pue(adidas);
-		System.out.println("\nValmistuneena Jasperilla: ");
-		jasper.pue(boss);
+		jasper.setTehdas(adidas);
+		jasper.pue();
+		System.out.println();
+		jasper.kerro();
+		
+		System.out.println("\n\nValmistuneena Jasperilla: ");
+		jasper.setTehdas(boss);
+		jasper.pue();
+		System.out.println();
+		jasper.kerro();
 	}
 
 }
