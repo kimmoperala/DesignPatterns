@@ -1,13 +1,8 @@
 package abstractfactory;
 
-public class BossFarkut implements Vaate{
+public class BossFarkut extends Farkut{
 
 	public String toString() {
 		return "Boss-farkut";
-	}
-
-	@Override
-	public void pue() {
-		toString();
 	}
 }

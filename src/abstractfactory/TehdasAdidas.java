@@ -19,7 +19,7 @@ public class TehdasAdidas implements Tehdas{
 
 	@Override
 	public Vaate makeKengat() {
-		return new AdidasKengät();
+		return new AdidasKengat();
 	}
 
 }

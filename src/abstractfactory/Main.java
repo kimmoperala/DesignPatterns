@@ -6,9 +6,9 @@ public class Main {
 		Tehdas adidas = new TehdasAdidas();
 		Tehdas boss = new TehdasBoss();
 		Jasper jasper = new Jasper();
-		System.out.println("Opiskelijana: ");
+		System.out.println("Opiskelijana Jasperilla: ");
 		jasper.pue(adidas);
-		System.out.println("\nValmistuneena: ");
+		System.out.println("\nValmistuneena Jasperilla: ");
 		jasper.pue(boss);
 	}
 

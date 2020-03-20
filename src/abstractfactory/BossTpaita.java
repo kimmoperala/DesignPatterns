@@ -1,13 +1,8 @@
 package abstractfactory;
 
-public class BossTpaita implements Vaate{
+public class BossTpaita extends Tpaita{
 
 	public String toString() {
 		return "Bossin T-paita";
-	}
-
-	@Override
-	public void pue() {
-		toString();
 	}
 }

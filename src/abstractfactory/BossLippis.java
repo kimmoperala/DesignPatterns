@@ -1,14 +1,8 @@
 package abstractfactory;
 
-public class BossLippis implements Vaate {
+public class BossLippis extends Lippis {
 
 	public String toString() {
 		return "Bossin lippis";
 	}
-
-	@Override
-	public void pue() {
-		toString();
-	}
-
 }

@@ -19,7 +19,7 @@ public class TehdasBoss implements Tehdas {
 
 	@Override
 	public Vaate makeKengat() {
-		return new BossKengät();
+		return new BossKengat();
 	}
 
 }
