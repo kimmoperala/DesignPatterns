@@ -23,11 +23,6 @@ public class NumberMachine {
 		int number = Integer.parseInt(numbers.get(0));
 		this.qNumber = number;
 		this.numbers.remove(Integer.toString(number));
-		System.out.println(this.numbers);
-
 		return number;
-	}
-	public List<String> getNumbers() {
-		return this.numbers;
 	}
 }
