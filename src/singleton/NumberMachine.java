@@ -1,11 +1,16 @@
 package singleton;
 
-public class NumberMachine {
-	
-	private NumberMachine() {}
-	
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class NumberMachine {	
 	private static NumberMachine INSTANCE = null;
-	private int qNumber = 0;
+	private int qNumber;
+	private List<String> numbers = new ArrayList<>(Arrays.asList("1","2","3","4","5","6","7","8","9","10"));
+
+	private NumberMachine() {	
+	}
 	
 	public static synchronized NumberMachine getInstance() {
 		if (INSTANCE == null) {
@@ -14,9 +19,15 @@ public class NumberMachine {
 		return INSTANCE;
 	}
 	
-	public int createNumber() {
-		int number = qNumber + 1;
-		qNumber = number;
+	public synchronized int createNumber() {
+		int number = Integer.parseInt(numbers.get(0));
+		this.qNumber = number;
+		this.numbers.remove(Integer.toString(number));
+		System.out.println(this.numbers);
+
 		return number;
+	}
+	public List<String> getNumbers() {
+		return this.numbers;
 	}
 }
