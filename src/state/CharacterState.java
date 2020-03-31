@@ -1,10 +1,11 @@
 package state;
 
 public abstract class CharacterState {
-	void escape(Pokemon pokemon) {}
-	void attack(Pokemon pokemon) {}
-	void fight(Pokemon pokemon) {}
-	void changeState(Pokemon pokemon, CharacterState s) {
+	public void escape() {}
+	public void attack() {}
+	public void fight() {}
+	public void changeState(Pokemon pokemon, CharacterState s) {
 		pokemon.changeState(s);
 	}
+	public void evolve(Pokemon pokemon) {}
 }

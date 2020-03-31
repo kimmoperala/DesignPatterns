@@ -7,13 +7,13 @@ public class Pokemon {
 		state = Charmander.getInstance();
 	}
 	public void withdraw() {
-		state.escape(this);
+		state.escape();
 	};
 	public void charge() {
-		state.attack(this);
+		state.attack();
 	};
 	public void battle() {
-		state.fight(this);
+		state.fight();
 	};
 	protected void changeState (CharacterState s) {
 		state = s;
