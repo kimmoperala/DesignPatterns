@@ -2,7 +2,6 @@ package state;
 
 public class Charmeleon extends CharacterState {
 	private static Charmeleon INSTANCE = null;
-	private int points;
 	
 	private Charmeleon() {}
 	public static Charmeleon getInstance() {
@@ -11,16 +10,27 @@ public class Charmeleon extends CharacterState {
 		}
 		return INSTANCE;
 	}
-	public void escape() {
-		System.out.println("Charmeleon pakenee!");
+	public void escape(Pokemon pokemon) {
+		int points = -150;
+		System.out.println("Charmeleon pakenee! " + points);
+		pokemon.addPoints(points);
 	}
-	public void attack() {
-		System.out.println("Charmeleon hyökkää liekillä!");
+	public void attack(Pokemon pokemon) {
+		int points = 150;
+		System.out.println("Charmeleon hyökkää liekillä! " + points);
+		pokemon.addPoints(points);
 	}
-	public void fight() {
-		System.out.println("Charmeleon raapii!");
+	public void fight(Pokemon pokemon) {
+		int points = 300;
+		System.out.println("Charmeleon raapii! " + points);
+		pokemon.addPoints(points);
 	}
 	public void evolve(Pokemon pokemon) {
-		changeState(pokemon, Charizard.getInstance());
+		System.out.println("Charmeleon kehittyi Charizardiksi!");
+		pokemon.change(Charizard.getInstance());
+	}
+	public void revert(Pokemon pokemon) {
+		System.out.println("Charmeleon palautui Charmanderiksi!");
+		pokemon.change(Charmander.getInstance());
 	}
 }
