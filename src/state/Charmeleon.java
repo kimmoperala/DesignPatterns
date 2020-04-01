@@ -17,12 +17,12 @@ public class Charmeleon extends CharacterState {
 	}
 	public void attack(Pokemon pokemon) {
 		int points = 150;
-		System.out.println("Charmeleon hyökkää liekillä! " + points);
+		System.out.println("Charmeleon hyökkää liekillä! +" + points);
 		pokemon.addPoints(points);
 	}
 	public void fight(Pokemon pokemon) {
 		int points = 300;
-		System.out.println("Charmeleon raapii! " + points);
+		System.out.println("Charmeleon raapii! +" + points);
 		pokemon.addPoints(points);
 	}
 	public void evolve(Pokemon pokemon) {

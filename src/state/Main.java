@@ -15,10 +15,11 @@ public class Main {
 		Thread.sleep(500);
 		System.out.println("--1--");
 		Thread.sleep(500);
+		boolean running = true;
 		System.out.println("Pokemon liikkeellä!");
 		Thread.sleep(1000);
 
-		while (true) {
+		while (running) {
 			int randomizer = (int) (Math.random()*3 + 1);			
 			switch (randomizer) {
 				case 1:
@@ -32,8 +33,12 @@ public class Main {
 					break;
 			}
 			Thread.sleep(500);
-			System.out.println("Pisteet: " + pokemon.getPoints());
+			System.out.println("\tPisteet: " + pokemon.getPoints());
+			if (pokemon.getPoints() >= 2000) {
+				running = false;
+			}
 		}
+		System.out.println("Peli ohi! Pisteesi " + pokemon.getPoints());
 	}
 
 }

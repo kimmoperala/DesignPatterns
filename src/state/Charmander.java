@@ -17,12 +17,12 @@ public class Charmander extends CharacterState {
 	}
 	public void attack(Pokemon pokemon) {
 		int points = 100;
-		System.out.println("Charmander hyökkää pienellä liekillä! " + points);
+		System.out.println("Charmander hyökkää pienellä liekillä! +" + points);
 		pokemon.addPoints(points);
 	}
 	public void fight(Pokemon pokemon) {
 		int points = 200;
-		System.out.println("Charmander potkii! " + points);
+		System.out.println("Charmander potkii! +" + points);
 		pokemon.addPoints(points);
 	}
 	public void evolve(Pokemon pokemon) {
