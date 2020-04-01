@@ -13,7 +13,7 @@ public class RockScissorsPaper extends Game {
 
 	@Override
 	void initializeGame() {
-		System.out.println("Tervetuloa peliin!");
+		System.out.println("Tervetuloa kps-peliin!");
 		handToBeat = options[(int)(Math.random()*3)];
 	}
 
