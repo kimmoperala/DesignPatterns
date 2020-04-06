@@ -3,7 +3,7 @@ package strategy;
 import java.util.Random;
 
 public class Main {
-	final static int ARRAY_SIZE = 100000;
+	final static int ARRAY_SIZE = 50000;
 	final static int NUMBERS_UNDER = 1000;
 
 	public static void main(String[] args) {
@@ -17,7 +17,8 @@ public class Main {
 		}
 		
 		System.out.println("Taulukon koko: " + ARRAY_SIZE + ", numerot alle arvon: " + NUMBERS_UNDER);
-		
+		System.out.println("Laskee...");
+
 		Sortable sortable = new Sortable();
 		sortable.setStrategy(new BubbleSort());
 		
@@ -49,13 +50,7 @@ public class Main {
 		elapsedTime = System.nanoTime() - start;
 		elapsedTimeInSeconds = (double) elapsedTime / 1_000_000_000;
 		System.out.println("Lisäyslajittelun aika: " + elapsedTimeInSeconds);
-		
-		/*System.out.println("Lisäyslajittelun jälkeen:");
-		for (int i: returned) {
-			System.out.print(i + ", ");
-		}
-		System.out.println("");*/
-		
+
 		for (int i=0; i< ARRAY_SIZE; i++) {
 			array[i] = r.nextInt(NUMBERS_UNDER);
 		}
@@ -69,12 +64,6 @@ public class Main {
 		elapsedTime = System.nanoTime() - start;
 		elapsedTimeInSeconds = (double) elapsedTime / 1_000_000_000;
 		System.out.println("Pikalajittelun aika: " + elapsedTimeInSeconds);
-						
-		/*System.out.println("Pikalajittelun jälkeen:");
-		for (int i: returned) {
-			System.out.print(i + ", ");
-		}
-		System.out.println("");*/
 	}
 
 }

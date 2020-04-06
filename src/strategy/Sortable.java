@@ -8,7 +8,7 @@ public class Sortable {
 	}
 	
 	public int[] returnSortedArray(int[] array) {
-		return strategy.sort(array);
+		return this.strategy.sort(array);
 	}
 	
 	public void setStrategy(SortingStrategy strategy) {
