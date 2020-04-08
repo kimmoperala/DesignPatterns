@@ -13,12 +13,14 @@ public class RockScissorsPaper extends Game {
 
 	@Override
 	void initializeGame() {
-		System.out.println("Tervetuloa kps-peliin! Arvaa minkä tietokone on valinnut!");
-		handToBeat = options[(int)(Math.random()*3)];
+		System.out.println("Tervetuloa! Yritä voittaa tietokone kivi-paperi-sakset-pelissä...");
 	}
 
 	@Override
 	void makePlay(int player) {
+		handToBeat = options[(int)(Math.random()*3)];
+		System.out.println(handToBeat);
+
 		while (true) {
 			System.out.println("Pelaaja " + (player+1) + ", valitse kivi(k), paperi(p) tai sakset(s)!");
 			guess = reader.nextLine();
@@ -41,9 +43,20 @@ public class RockScissorsPaper extends Game {
 
 	@Override
 	boolean endOfGame() {
-		if (handToBeat.equals(guess)) {
-			System.out.println("\t" + StringUtils.capitalize(guess) + " on oikein!");
-			return true;
+		if (guess != null) {
+			if (handToBeat.equals(options[0]) && guess.equals(options[1])
+				|| handToBeat.equals(options[1]) && guess.equals(options[2])
+				|| handToBeat.equals(options[2]) && guess.equals(options[0])) {
+				return true;
+			}
+			else if (handToBeat.equals(options[0]) && guess.equals(options[2])
+					|| handToBeat.equals(options[1]) && guess.equals(options[0])
+					|| handToBeat.equals(options[2]) && guess.equals(options[1])) {
+					System.out.println("Tietokone voitti!");
+			}
+			else if (handToBeat.equals(guess)) {
+					System.out.println("Tasapeli!");
+			}
 		}
 		return false;
 	}
