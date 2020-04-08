@@ -19,7 +19,6 @@ public class RockScissorsPaper extends Game {
 	@Override
 	void makePlay(int player) {
 		handToBeat = options[(int)(Math.random()*3)];
-		System.out.println(handToBeat);
 
 		while (true) {
 			System.out.println("Pelaaja " + (player+1) + ", valitse kivi(k), paperi(p) tai sakset(s)!");
