@@ -10,7 +10,7 @@ public class Asiakas implements Runnable {
 	public Asiakas(int playerNumber, Arvuuttaja arvuuttaja) {
 		this.oikein = false;
 		this.arvuuttaja = arvuuttaja;
-		arvaus=1;
+		this.arvaus=1;
 		this.playerNumber = playerNumber;
 	}
 	public int getPlayerNumber() {
