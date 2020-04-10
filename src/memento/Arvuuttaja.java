@@ -8,7 +8,7 @@ public class Arvuuttaja {
 		return new Memento(number);
 	}
 	
-	public boolean onkoOikein(Object obj, int arvaus) {
+	public synchronized boolean onkoOikein(Object obj, int arvaus) {
 		Memento memento = (Memento) obj;
 		int oikeaNumero = memento.numero;
 		if (arvaus == oikeaNumero) {
