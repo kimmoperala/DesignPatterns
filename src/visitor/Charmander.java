@@ -10,20 +10,23 @@ public class Charmander extends CharacterState {
 		}
 		return INSTANCE;
 	}
-	public void escape(Pokemon pokemon) {
+	public void escape(Pokemon pokemon, Visitor visitor) {
 		int points = -100;
 		System.out.println("Charmander pakenee! " + points);
 		pokemon.addPoints(points);
+		visitor.visit(this);
 	}
-	public void attack(Pokemon pokemon) {
+	public void attack(Pokemon pokemon, Visitor visitor) {
 		int points = 100;
 		System.out.println("Charmander hyökkää pienellä liekillä! +" + points);
 		pokemon.addPoints(points);
+		visitor.visit(this);
 	}
-	public void fight(Pokemon pokemon) {
+	public void fight(Pokemon pokemon, Visitor visitor) {
 		int points = 200;
 		System.out.println("Charmander potkii! +" + points);
 		pokemon.addPoints(points);
+		visitor.visit(this);
 	}
 	public void evolve(Pokemon pokemon) {
 		System.out.println("Charmander kehittyi Charmeleoniksi!");

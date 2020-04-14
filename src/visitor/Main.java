@@ -6,18 +6,18 @@ public class Main {
 		Pokemon pokemon = new Pokemon();
 		System.out.println("Pokemon pakenee, hyökkää tai taistelee. Se kehittyy, kun se saa 500 pistettä tai 1000 pistettä.");
 		System.out.println("Samoin se taantuu jos pisteet menevät alle 500 tai 1000.");
-		Thread.sleep(5000);
+		Thread.sleep(500);
 		System.out.println("Pokemon valmiina.");
-		Thread.sleep(1000);
+		Thread.sleep(100);
 		System.out.println("--3--");
-		Thread.sleep(500);
+		Thread.sleep(50);
 		System.out.println("--2--");
-		Thread.sleep(500);
+		Thread.sleep(50);
 		System.out.println("--1--");
-		Thread.sleep(500);
+		Thread.sleep(50);
 		boolean running = true;
 		System.out.println("Pokemon liikkeellä!");
-		Thread.sleep(1000);
+		Thread.sleep(100);
 
 		while (running) {
 			int randomizer = (int) (Math.random()*3 + 1);			

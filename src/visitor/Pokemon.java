@@ -3,32 +3,33 @@ package visitor;
 public class Pokemon {
 	private CharacterState state;
 	private int points;
+	private Visitor visitor;
 	
 	public Pokemon() {
 		state = Charmander.getInstance();
 		points = 0;
+		visitor = new EvolveVisitor(this);
 	}
 	public void withdraw() {
-		state.escape(this);
+		state.escape(this, visitor);
 	};
 	public void charge() {
-		state.attack(this);
+		state.attack(this, visitor);
 	};
 	public void battle() {
-		state.fight(this);
+		state.fight(this, visitor);
 	};
 	protected void change(CharacterState newState) {
 		state = newState;
 	}
+	public void evolve() {
+		state.evolve(this);
+	}
+	public void revert() {
+		state.revert(this);
+	}
 	public void addPoints(int points) {
-		int oldPoints = this.points;
 		this.points += points;
-		if (oldPoints < 500 && this.points >= 500 || oldPoints < 1000 && this.points >= 1000) {
-			state.evolve(this);
-		}
-		if ((oldPoints >= 0 && this.points < 0) || (oldPoints >= 500 && this.points < 500) || (oldPoints >= 1000 && this.points < 1000)) {
-			state.revert(this);
-		}
 	}
 	public int getPoints() {
 		return this.points;
