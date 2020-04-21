@@ -23,21 +23,21 @@ public class McDonalds extends BurgerBuilder {
 	@Override
 	public void buildSteak() {
 		System.out.println("Lisätään pihvi");
-		stringbuilder.append(", ");
+		stringbuilder.append(",");
 		stringbuilder.append("beef steak McD");
 	}
 
 	@Override
 	public void buildOnion() {
 		System.out.println("Lisätään sipuli");
-		stringbuilder.append(", ");
+		stringbuilder.append(",");
 		stringbuilder.append("red onion McD");
 	}
 
 	@Override
 	public void buildMayonnese() {
 		System.out.println("Lisätään majoneesi");
-		stringbuilder.append(", ");
+		stringbuilder.append(",");
 		stringbuilder.append("creamy mayonnaise McD");
 	}
 
