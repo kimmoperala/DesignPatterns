@@ -8,6 +8,7 @@ public class SecondHand implements Hand, Cloneable {
 		second = 0;
 	}
 	
+	@Override
 	public Object clone() {
 		try {
 			return super.clone();
@@ -17,6 +18,7 @@ public class SecondHand implements Hand, Cloneable {
 		return null;
 	}
 
+	
 	@Override
 	public void tick() {
 		this.second++;
@@ -26,15 +28,18 @@ public class SecondHand implements Hand, Cloneable {
 		}
 	}
 	
-	public int getSecond () {
+	@Override
+	public int getTime () {
 		return this.second;
 	}
 	
-	public void setSecond (int second) {
+	@Override
+	public void setTime (int second) {
 		this.second = second;
 	}
 	
-	public void setMinuteHand(Hand minuteHand) {
-		this.minuteHand = minuteHand;
+	@Override
+	public void setNextHand(Hand nextHand) {
+		this.minuteHand = nextHand;
 	}
 }

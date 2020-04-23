@@ -8,6 +8,7 @@ public class MinuteHand implements Hand, Cloneable {
 		minute = 0;
 	}
 	
+	@Override
 	public Object clone() {
 		try {
 			return super.clone();
@@ -26,15 +27,18 @@ public class MinuteHand implements Hand, Cloneable {
 		}
 	}
 	
-	public int getMinute () {
+	@Override
+	public int getTime () {
 		return this.minute;
 	}
 	
-	public void setMinute (int minute) {
+	@Override
+	public void setTime (int minute) {
 		this.minute = minute;
 	}
 	
-	public void setHourHand(Hand hourHand) {
-		this.hourHand = hourHand;
+	@Override
+	public void setNextHand(Hand nextHand) {
+		this.hourHand = nextHand;
 	}
 }

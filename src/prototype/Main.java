@@ -3,9 +3,9 @@ package prototype;
 public class Main {
 
 	public static void main(String[] args) {
-		SecondHand secondHand = new SecondHand();
-		MinuteHand minuteHand = new MinuteHand();
-		HourHand hourHand = new HourHand();
+		Hand secondHand = new SecondHand();
+		Hand minuteHand = new MinuteHand();
+		Hand hourHand = new HourHand();
 		Clock clock = new Clock(secondHand, minuteHand, hourHand);
 		new Thread(clock).start();
 		

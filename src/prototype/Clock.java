@@ -1,16 +1,19 @@
 package prototype;
 
 public class Clock implements Runnable, Cloneable {
-	private SecondHand secondHand;
-	private MinuteHand minuteHand;
-	private HourHand hourHand;
+	private Hand secondHand;
+	private Hand minuteHand;
+	private Hand hourHand;
 	
-	public Clock(SecondHand s, MinuteHand m, HourHand h) {
+	public Clock(Hand s, Hand m, Hand h) {
+		secondHand = new SecondHand();
 		secondHand = s;
+		minuteHand = new MinuteHand();
 		minuteHand = m;
+		hourHand = new HourHand();
 		hourHand = h;
-		secondHand.setMinuteHand(minuteHand);
-		minuteHand.setHourHand(hourHand);		
+		secondHand.setNextHand(minuteHand);
+		minuteHand.setNextHand(hourHand);		
 	}
 	
 	public Clock clone() {
@@ -20,8 +23,8 @@ public class Clock implements Runnable, Cloneable {
 			clock.secondHand = (SecondHand) secondHand.clone();
 			clock.minuteHand = (MinuteHand) minuteHand.clone();
 			clock.hourHand = (HourHand) hourHand.clone();
-			clock.secondHand.setMinuteHand(clock.minuteHand);
-			clock.minuteHand.setHourHand(clock.hourHand);
+			clock.secondHand.setNextHand(clock.minuteHand);
+			clock.minuteHand.setNextHand(clock.hourHand);
 		} catch (CloneNotSupportedException e) {
 		}
 		return clock;
@@ -42,21 +45,21 @@ public class Clock implements Runnable, Cloneable {
 	}
 	
 	public void setSecond(int second) {
-		secondHand.setSecond(second);
+		secondHand.setTime(second);
 	}
 	public void setminute(int minute) {
-		minuteHand.setMinute(minute);
+		minuteHand.setTime(minute);
 	}
 	public void setHour(int hour) {
-		hourHand.setHour(hour);
+		hourHand.setTime(hour);
 	}
 	
 	public void showTime() {
-		int second = secondHand.getSecond();
+		int second = secondHand.getTime();
 		String secondString = Integer.toString(second);
-		int minute = minuteHand.getMinute();
+		int minute = minuteHand.getTime();
 		String minuteString = Integer.toString(minute);
-		int hour = hourHand.getHour();
+		int hour = hourHand.getTime();
 		String hourString = Integer.toString(hour);
 		
 		if (second < 10) {
