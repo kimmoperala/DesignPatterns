@@ -70,12 +70,4 @@ public class Clock implements Runnable, Cloneable {
 		}
 		System.out.println(hourString + ":" + minuteString + ":" + secondString);
 	}
-	/*
-	public void addHands(SecondHand secondHand, MinuteHand minuteHand, HourHand hourHand) {
-		this.secondHand = secondHand;
-		this.minuteHand = minuteHand;
-		this.hourHand = hourHand;
-		this.
-		this.
-	}*/
 }
