@@ -16,7 +16,7 @@ public class Main {
 			numbers.add(i);
 		}
 		
-		// a) iteroidaan kokoelmaa 2 säikeellä yhtä aikaa, kun molemmilla on oma iterattori.
+		// a) Iterate the collection with 2 threads simultaneously with their own iterators.
 		final class SaieA extends Thread{
 			private int id;
 			
@@ -35,7 +35,7 @@ public class Main {
 		Iterator<Integer> bIterator = numbers.iterator();
 
 		
-		// b) säikeet käyttävät samaa iteraattoria vuorotellen
+		// b) Threads use the same iterator in turns
 		final class SaieB extends Thread {
 			private int id = 1;
 			
@@ -50,7 +50,7 @@ public class Main {
 			}
 		}
 		
-		// c) kokoelmaan tehdään muutoksia iteroinnin läpikäynnin aikana
+		// c) Collection is modified during iteration
 		final class SaieC extends Thread {
 			private int id = 1;
 			
@@ -68,7 +68,7 @@ public class Main {
 			}
 		}
 		
-		// d) iteraattorin remove
+		// d) Remove operation of iteration
 				final class SaieD extends Thread {
 					private int id = 1;
 					
