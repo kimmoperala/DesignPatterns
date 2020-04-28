@@ -1,6 +1,6 @@
 package decorator;
 
-public class Pohja implements Pizza {
+public class Pohja implements PizzaAines {
 
 	private double price = 1.0;
 	

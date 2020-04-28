@@ -1,6 +1,6 @@
 package decorator;
 
-public interface Pizza {
+public interface PizzaAines {
 	public double getPrice();
 	public String toString();
 }

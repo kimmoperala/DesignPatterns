@@ -4,8 +4,8 @@ public class Salami extends Tayte {
 
 	private double price = 3.5;
 	
-	public Salami(Pizza newPizza) {
-		super(newPizza);
+	public Salami(PizzaAines newPizzaAines) {
+		super(newPizzaAines);
 	}
 
 	@Override

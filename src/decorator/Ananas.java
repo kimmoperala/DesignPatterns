@@ -4,8 +4,8 @@ public class Ananas extends Tayte {
 
 	private double price = 3.0;
 	
-	public Ananas(Pizza newPizza) {
-		super(newPizza);
+	public Ananas(PizzaAines newPizzaAines) {
+		super(newPizzaAines);
 	}
 
 	@Override

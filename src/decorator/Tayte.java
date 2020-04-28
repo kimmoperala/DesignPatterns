@@ -1,18 +1,18 @@
 package decorator;
 
-public abstract class Tayte implements Pizza {
-	protected Pizza newPizza;
+public abstract class Tayte implements PizzaAines {
+	protected PizzaAines newPizzaAines;
 	
-	public Tayte (Pizza newPizza) {
-		this.newPizza = newPizza;
+	public Tayte (PizzaAines newPizzaAines) {
+		this.newPizzaAines = newPizzaAines;
 	}
 
 	public double getPrice() {
-		return newPizza.getPrice();
+		return newPizzaAines.getPrice();
 	}
 
 	public String toString() {
-		return newPizza.toString();
+		return newPizzaAines.toString();
 	}
 
 }

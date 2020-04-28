@@ -3,7 +3,7 @@ package decorator;
 public class Main {
 
 	public static void main(String[] args) {
-		Pizza[] options = {
+		PizzaAines[] options = {
 				new Tonnikala (new Ananas(new Pohja())), new Kinkku (new Ananas(new Pohja())), new Kinkku (new Salami(new Tonnikala(new Pohja())))
 		};
 		for (int i = 0; i < options.length; i++) {

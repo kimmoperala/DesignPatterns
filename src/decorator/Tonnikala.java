@@ -4,8 +4,8 @@ public class Tonnikala extends Tayte {
 	
 	private double price = 2.5;
 	
-	public Tonnikala(Pizza newPizza) {
-		super(newPizza);
+	public Tonnikala(PizzaAines newPizzaAines) {
+		super(newPizzaAines);
 	}
 
 	@Override

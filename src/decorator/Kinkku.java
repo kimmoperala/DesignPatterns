@@ -4,8 +4,8 @@ public class Kinkku extends Tayte {
 
 	private double price = 4.0;
 	
-	public Kinkku(Pizza newPizza) {
-		super(newPizza);
+	public Kinkku(PizzaAines newPizzaAines) {
+		super(newPizzaAines);
 	}
 
 	@Override
