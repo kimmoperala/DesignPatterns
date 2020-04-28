@@ -12,4 +12,9 @@ public class LowerCommand implements Command {
 		screen.lower();
 	}
 
+	@Override
+	public void addCommand(Command command) {
+		throw new RuntimeException("Can't add a command");
+	}
+
 }
