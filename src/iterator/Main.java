@@ -69,23 +69,23 @@ public class Main {
 		}
 		
 		// d) Remove operation of iteration
-				final class SaieD extends Thread {
-					private int id;
-					
-					public SaieD(int id) {
-						this.id = id;
-					}
-					public void run() {
-						while(bIterator.hasNext()) {
-							Integer value = bIterator.next();
-							System.out.println("Thread " + id + " iterated number " + value);
-							if (value % 3 == 0) {
-								bIterator.remove();
-							}
-						}
-						System.out.println(numbers);
+		final class SaieD extends Thread {
+			private int id;
+			
+			public SaieD(int id) {
+				this.id = id;
+			}
+			public void run() {
+				while(bIterator.hasNext()) {
+					Integer value = bIterator.next();
+					System.out.println("Thread " + id + " iterated number " + value);
+					if (value % 3 == 0) {
+						bIterator.remove();
 					}
 				}
+				System.out.println(numbers);
+			}
+		}
 		
 		SaieA saie1 = new SaieA(1);
 		SaieA saie2 = new SaieA(2);
