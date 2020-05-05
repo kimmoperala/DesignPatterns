@@ -52,7 +52,7 @@ public class Main {
 		
 		// c) Collection is modified during iteration
 		final class SaieC extends Thread {
-			private int id = 1;
+			private int id;
 			
 			public SaieC(int id) {
 				this.id = id;
@@ -70,7 +70,7 @@ public class Main {
 		
 		// d) Remove operation of iteration
 				final class SaieD extends Thread {
-					private int id = 1;
+					private int id;
 					
 					public SaieD(int id) {
 						this.id = id;
