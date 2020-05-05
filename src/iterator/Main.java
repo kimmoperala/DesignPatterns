@@ -37,7 +37,7 @@ public class Main {
 		
 		// b) Threads use the same iterator in turns
 		final class SaieB extends Thread {
-			private int id = 1;
+			private int id;
 			
 			public SaieB(int id) {
 				this.id = id;
